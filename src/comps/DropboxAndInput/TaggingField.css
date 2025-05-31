@@ -1,0 +1,25 @@
+.container-tagging-field{
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    font-family: 'Outfit', sans-serif;
+}
+.tag-label{
+    width: 90%;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tag-input{
+    background-color: #BBFBFF;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+}
