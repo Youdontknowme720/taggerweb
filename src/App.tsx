@@ -30,6 +30,7 @@ function App() {
             const response = await fetch(`${API_URL}/tagging`, {
                 method: 'POST',
                 body: formData,
+                mode: 'cors',
             });
 
             if (!response.ok) {
