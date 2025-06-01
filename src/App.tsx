@@ -18,7 +18,7 @@ const App = () => {
                 fontFamily: "'Outfit', sans-serif",
             }}
             >
-                Welcome to my Webside for my projects
+                My Projects overview
             </motion.h1>
             <div style={{
                 display: 'flex',
