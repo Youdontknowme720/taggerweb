@@ -18,7 +18,6 @@ const TaggerPage = () => {
             justifyContent: "center",
             height: "100%",
             width: "100%",
-            backgroundColor: "rgba(84, 9, 218, 1)",
             fontFamily: "'Outfit', sans-serif"
         }}>
             <div style={{display: "flex", justifyContent: "center", marginTop: "50px"}}>

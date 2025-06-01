@@ -12,5 +12,6 @@
 .title-text{
     color: #BBFBFF;
     font-size: 40px;
+    align-items: center;
     font-family: 'Outfit', sans-serif;
 }
