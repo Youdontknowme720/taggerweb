@@ -17,6 +17,7 @@ const TaggerPage = () => {
             alignItems: "center",
             justifyContent: "center",
             height: "100%",
+            width: "100%",
             backgroundColor: "rgba(84, 9, 218, 1)",
             fontFamily: "'Outfit', sans-serif"
         }}>
@@ -29,7 +30,7 @@ const TaggerPage = () => {
             <div style={{display: "flex", justifyContent: "center", marginTop: "120px"}}>
                 <Dropbox onFileDrop={setFile} />
             </div>
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{display: "flex"}}>
                 <TaggingField tagname="Enter Interpret" value={interpret} onChange={setInterpret} />
                 <TaggingField tagname="Enter Titel" value={titel} onChange={setTitel} />
             </div>
