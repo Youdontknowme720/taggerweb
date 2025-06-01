@@ -16,8 +16,7 @@ const ExplainTxt: React.FC = () => {
             <p style={{display: "flex"}}>
                 MP3-Tagging bedeutet, Audiodateien mit zusätzlichen Informationen zu versehen, wie Titel, Künstler,
                 Album, Genre und mehr.
-                Diese Tags helfen dabei, Musik zu organisieren und schneller zu finden – sei es auf dem Computer, in
-                einer Musik-App oder auf einem MP3-Player.
+                Diese Tags helfen dabei, Musik zu organisieren und schneller zu finden.
             </p>
         </div>
     );
