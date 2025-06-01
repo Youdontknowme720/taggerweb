@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Youdontknowme720.github.io/taggerweb",
+  "homepage": "https://nwinformatik.de",
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
