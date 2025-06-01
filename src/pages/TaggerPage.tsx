@@ -31,7 +31,7 @@ const TaggerPage = () => {
             </div>
             <div style={{display: "flex"}}>
                 <TaggingField tagname="Enter Interpret" value={interpret} onChange={setInterpret} />
-                <TaggingField tagname="Enter Titel" value={titel} onChange={setTitel} />
+                <TaggingField tagname="Enter Title" value={titel} onChange={setTitel} />
             </div>
             <SubmitButton interpret={interpret} titel={titel} file={file} />
         </div>
