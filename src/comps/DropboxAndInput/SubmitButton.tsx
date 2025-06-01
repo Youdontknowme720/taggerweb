@@ -72,6 +72,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) =
                     justifyContent: 'center',
                     gap: '12px',
                     fontFamily: 'Outfit, sans-serif',
+                    marginBottom: '20px',
                 }}
             >
                 {isLoading ? '' : 'Submit'}

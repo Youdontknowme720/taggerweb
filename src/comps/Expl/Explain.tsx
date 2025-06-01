@@ -5,7 +5,11 @@ import taggerImg from '../../assets/Tagger.png';
 
 const Explain: React.FC = () => {
     return (
-        <div className='explain-container'>
+        <div className='explain-container' style={{
+            color: '#BBFBFF',
+            display: 'flex',
+            flexDirection: 'row',
+        }}>
             <ExplainTxt></ExplainTxt>
             <img src={taggerImg} className="explain-img"/>
         </div>

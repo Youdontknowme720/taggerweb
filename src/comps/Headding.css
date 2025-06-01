@@ -2,9 +2,11 @@
     padding: 16px;
     background-color: #4E71FF;
     border-radius: 20px;
-    width: 800px;
+    width: 1000px;
     height: 120px;
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-text{

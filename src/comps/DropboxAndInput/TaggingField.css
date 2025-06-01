@@ -3,6 +3,7 @@
     height: 200px;
     justify-content: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin-left: 100px;
     font-family: 'Outfit', sans-serif;
@@ -12,6 +13,7 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #BBFBFF;
 }
 
 .tag-input{
