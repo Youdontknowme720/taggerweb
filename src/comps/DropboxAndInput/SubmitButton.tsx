@@ -12,6 +12,32 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) =
     const [isLoading, setIsLoading] = useState(false);
     const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
+    const fadeIn = (audio: HTMLAudioElement, duration = 1000) => {
+        audio.volume = 0;
+        const step = 0.02;
+        const interval = duration / (1 / step);
+        const fadeInInterval = setInterval(() => {
+            if (audio.volume < 1) {
+                audio.volume = Math.min(audio.volume + step, 1);
+            } else {
+                clearInterval(fadeInInterval);
+            }
+        }, interval);
+    };
+
+    const fadeOut = (audio: HTMLAudioElement, duration = 1000) => {
+        const step = 0.02;
+        const interval = duration / (1 / step);
+        const fadeOutInterval = setInterval(() => {
+            if (audio.volume > 0) {
+                audio.volume = Math.max(audio.volume - step, 0);
+            } else {
+                audio.pause();
+                clearInterval(fadeOutInterval);
+            }
+        }, interval);
+    };
+
     const handleSubmit = async () => {
         if (!file) {
             console.error('No file selected');
@@ -20,16 +46,17 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) =
 
         const audioUrl = URL.createObjectURL(file);
         if (audioRef.current) {
-            audioRef.current.src = audioUrl;
+            const audio = audioRef.current;
+            audio.src = audioUrl;
+            audio.currentTime = 30;
+            audio.volume = 0;
+            audio.play().then(() => {
+                fadeIn(audio, 3000);
 
-            audioRef.current.currentTime = 30;
-            audioRef.current.play();
-            setTimeout(() => {
-                if (audioRef.current) {
-                    audioRef.current.pause();
-                    audioRef.current.currentTime = 0;
-                }
-            }, 8000);
+                setTimeout(() => {
+                    fadeOut(audio, 3000);
+                }, 4000);
+            });
         }
 
         setIsLoading(true);
