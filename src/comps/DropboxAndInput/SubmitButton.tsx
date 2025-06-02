@@ -21,13 +21,15 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) =
         const audioUrl = URL.createObjectURL(file);
         if (audioRef.current) {
             audioRef.current.src = audioUrl;
+
+            audioRef.current.currentTime = 30;
             audioRef.current.play();
             setTimeout(() => {
                 if (audioRef.current) {
                     audioRef.current.pause();
                     audioRef.current.currentTime = 0;
                 }
-            }, 5000);
+            }, 8000);
         }
 
         setIsLoading(true);
