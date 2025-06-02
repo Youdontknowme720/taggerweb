@@ -10,11 +10,24 @@ interface SubmitButtonProps {
 
 const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) => {
     const [isLoading, setIsLoading] = useState(false);
+    const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
     const handleSubmit = async () => {
         if (!file) {
             console.error('No file selected');
             return;
+        }
+
+        const audioUrl = URL.createObjectURL(file);
+        if (audioRef.current) {
+            audioRef.current.src = audioUrl;
+            audioRef.current.play();
+            setTimeout(() => {
+                if (audioRef.current) {
+                    audioRef.current.pause();
+                    audioRef.current.currentTime = 0;
+                }
+            }, 5000);
         }
 
         setIsLoading(true);
@@ -99,6 +112,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({ interpret, titel, file }) =
                     </motion.div>
                 )}
             </motion.button>
+            <audio ref={audioRef} style={{ display: 'none' }} />
         </div>
     );
 };
