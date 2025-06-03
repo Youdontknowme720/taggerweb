@@ -1,5 +1,6 @@
-html, body {
+html, body, #root {
     background-color: rgba(84, 9, 218, 1);
     height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }

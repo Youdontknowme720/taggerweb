@@ -1,17 +1,13 @@
 .title-container{
-    padding: 16px;
-    background-color: #4E71FF;
-    border-radius: 20px;
-    width: 1000px;
-    height: 120px;
+    padding: 1vh;
+    width: 80vw;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .title-text{
-    color: #BBFBFF;
-    font-size: 40px;
-    align-items: center;
-    font-family: 'Outfit', sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
 }

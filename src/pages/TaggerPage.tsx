@@ -15,21 +15,20 @@ const TaggerPage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-            width: "100%",
+            height: "100vh",
+            width: "100vw",
             fontFamily: "'Outfit', sans-serif"
         }}>
-            <div style={{display: "flex", justifyContent: "center", marginTop: "50px"}}>
+            <div style={{display: "flex", justifyContent: "center", marginBottom: "-2vh"}}>
                 <Title text="Tag your MP3-Files for free"/>
             </div>
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{display: "flex", justifyContent: "center", width: "80%", height: "20%", alignItems: "center", marginBottom: "5vh"}}>
                 <Explain />
             </div>
-            <div style={{display: "flex", justifyContent: "center", marginTop: "120px"}}>
+            <div style={{display: "flex", justifyContent: "center", marginTop: "5vh"}}>
                 <Dropbox onFileDrop={setFile} />
             </div>
-            <div style={{display: "flex"}}>
+            <div style={{display: "flex", marginTop: "0.5vh"}}>
                 <TaggingField tagname="Enter Interpret" value={interpret} onChange={setInterpret} />
                 <TaggingField tagname="Enter Title" value={titel} onChange={setTitel} />
             </div>
