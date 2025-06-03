@@ -26,7 +26,7 @@ const FileDrop: React.FC<DropboxProps> = ({ onFileDrop }) => {
             setIsInvalid(false);
         } else {
             setIsInvalid(true);
-            setTimeout(() => setIsInvalid(false), 500); // shake nur kurz
+            setTimeout(() => setIsInvalid(false), 1500); // shake nur kurz
         }
     };
 
@@ -41,7 +41,7 @@ const FileDrop: React.FC<DropboxProps> = ({ onFileDrop }) => {
             onDrop={handleDrop}
             onDragOver={handleDragOver}
             animate={isInvalid ? { x: [-10, 10, -10, 10, 0] } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             style={{
                 border: isInvalid ? '2px solid red' : '2px dashed #BBFBFF',
                 padding: '40px',
@@ -56,7 +56,7 @@ const FileDrop: React.FC<DropboxProps> = ({ onFileDrop }) => {
 
             {isInvalid && (
                 <p style={{ color: 'red', marginTop: '10px' }}>
-                    Nur MP3-Dateien sind erlaubt.
+                    Only MP3-Files are allowed.
                 </p>
             )}
 

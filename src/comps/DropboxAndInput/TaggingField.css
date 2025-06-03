@@ -17,8 +17,8 @@
 }
 
 .tag-input{
-    background-color: #BBFBFF;
-    color: black;
+    background-color: rgba(187, 251, 255, 0.5);
+    color: #01101c;
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
     width: 100%;
