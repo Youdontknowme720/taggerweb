@@ -15,14 +15,22 @@ const TaggerPage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            height: "100vh",
-            width: "100vw",
             fontFamily: "'Outfit', sans-serif"
         }}>
             <div style={{display: "flex", justifyContent: "center", marginBottom: "-2vh"}}>
                 <Title text="Tag your MP3-Files for free"/>
             </div>
-            <div style={{display: "flex", justifyContent: "center", width: "80%", height: "20%", alignItems: "center", marginBottom: "5vh"}}>
+            <div style={
+                {
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    maxWidth: "1200px",
+                    height: "30vh",
+                    margin: "0 auto",
+                }
+            }>
                 <Explain />
             </div>
             <div style={{display: "flex", justifyContent: "center", marginTop: "5vh"}}>

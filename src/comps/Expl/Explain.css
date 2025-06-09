@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     background-color: rgba(78,113,255,0.5);
-    width: 50%;
-    height: 100%;
+    width: 90%;
+    max-width: 64rem;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     clip-path: polygon(
@@ -16,8 +16,8 @@
     );
 }
 .explain-img{
-    width: 12vw;
-    height: 12vh;
+    max-width: 20%;
+    max-height: 30%;
     border-radius: 20px;
     margin-right: 2vw;
     margin-left: 1vw;

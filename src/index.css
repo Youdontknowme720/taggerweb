@@ -1,6 +1,15 @@
-html, body, #root {
+html, #root {
     background-color: rgba(84, 9, 218, 1);
     height: 100%;
     margin: 0;
+    font-size: 62.5%;
     padding: 0;
+}
+p{
+    font-size: clamp(0.3rem, 4.0vw, 2.0rem);
+    color: white;
+}
+body {
+    font-size: 2.5rem;
+    color: white;
 }
